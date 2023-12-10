@@ -22,6 +22,10 @@ export class ToDoListComponent {
       this.showDelete = false;
     });
 
+    this.service.edit.pipe(takeUntilDestroyed()).subscribe(() => {
+      this.showDelete = true;
+    });
+
     this.service.clear.pipe(takeUntilDestroyed()).subscribe(() => {
       this.showDelete = true;
     });

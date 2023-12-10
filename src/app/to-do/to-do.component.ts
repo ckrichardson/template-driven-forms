@@ -36,6 +36,10 @@ export class ToDoComponent {
     this.service.saveList();
   }
 
+  onEdit(): void {
+    this.service.editList();
+  }
+
   onClear(): void {
     this.service.clearList();
   }

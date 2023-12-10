@@ -31,6 +31,10 @@ export class TodoFormComponent {
       this.newItemForm?.form.disable();
     });
 
+    this.service.edit.pipe(takeUntilDestroyed()).subscribe(() => {
+      this.newItemForm.form.enable();
+    });
+
     this.service.clear.pipe(takeUntilDestroyed()).subscribe(() => {
       this.newItemForm.form.enable();
       this.newItemForm?.reset();
