@@ -11,7 +11,7 @@ describe('TodoFormComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [TodoFormComponent],
-      providers: [ToDoService],
+      providers: [],
     }).compileComponents();
 
     TestBed.overrideProvider(ToDoService, {
